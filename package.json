@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "webpack": "webpack --mode production",
-    "build": "npm run webpack && npm run start "
+    "build": "npm run webpack && npm run start ",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",

@@ -7,7 +7,13 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.bundle.js',
+        filename: 'bundle.js',
+    },
+
+    devServer: {
+        contentBase: './',
+        watchContentBase: true,
+        publicPath: '/dist/',
     },
 
     module: {
@@ -16,12 +22,6 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader, 'css-loader',
-                ],
-            },
-            {
-                test: /\.txt$/,
-                use: [
-                    'raw-loader',
                 ],
             },
             {

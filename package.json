@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start --ss './dist' --port 8080 -w './dist'",
+    "start": "webpack serve --mode development",
     "webpack": "webpack --mode production",
     "build": "npm run webpack && npm run start "
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.14",
+    "webpack-dev-server": "^3.11.2",
     
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",
